@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snap-Cards-News </title>
+    <link rel="shortcut icon" type="x-icon" href="2.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+</head>
+<body>
+     <nav>
+        <div class="main-nav flex container">
+            <ul class="flex">
+                <li class="company-logo">
+                   <a href="#" onclick = "reload()" class="company-logo"> <img src="1.jpeg" alt="logo"></a>
+                </li>
+                <li class="hoverlink navitem" id = "FOOTBALL" onclick="onNavItemClick('FOOTBALL')">
+                    FOOTBALL
+                </li>
+                <li class="hoverlink navitem" id="FINANCE" onclick="onNavItemClick('FINANCE')">
+                    FINANCE
+                </li>
+                <li class="hoverlink navitem" id="TECHNOLOGY" onclick="onNavItemClick('TECHNOLOGY')">
+                    TECHNOLOGY
+                </li>
+             </ul>
+             <div class="search">
+                <input id="news-type" type="text" class="news-type" placeholder="e.g: Search">
+            </div>
+            <button id="Search-marr"  class="button-search" >Search</button>
+        </div>
+     </nav>
+     <main>
+        <div class="cards-container container flex" id="cardscontainer">
+            <!-- with the help of java script we will bring the cards here from template -->
+        </div>
+     </main>
+     <!-- using this template to create the new cars in the main block -->
+     <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" id = "news-img" alt="image">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source" >End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet tempora tempore, fugit error omnis rerum quos asperiores aliquam labore expedita.</p>
+            </div>
+        </div>
+     </template>
+     <script src="script.js"></script>
+</body>
+</html>
